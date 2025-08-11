@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_output_json_1.default));
-app.get("/", (req, res) => {
+app.get("/check", (req, res) => {
     return res.json("hello");
 });
 app.use("/user", userRouter_1.default);

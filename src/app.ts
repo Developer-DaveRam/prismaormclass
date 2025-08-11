@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.get("/",(req,res)=>{
+app.get("/check",(req,res)=>{
     return res.json("hello")
 })
 
