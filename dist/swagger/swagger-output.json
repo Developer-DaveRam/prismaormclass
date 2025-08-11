@@ -1,0 +1,42 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "My API",
+        "description": "Description",
+        "version": "1.0.0"
+    },
+    "host": "localhost:5007",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/user/create": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "description": "Endpoint to create a user",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    }
+}
